@@ -1,0 +1,14 @@
+<%- include ('partials/header') -%>
+            <div class="card">
+                <h1 class="heading">Home </h1>
+                <p class="lead">
+                    <%= pageContent %>
+                </p>
+            </div>
+            <% posts.forEach(post => { %>
+                <div class="card shadow">
+                    <h1 class="heading"> <%= post.title %> </h1>
+                    <p class="lead"><%= post.body.slice(0,100) + ' ...' %> <a href='<%= '/posts/' + post.title %>' class="link">Read More</a></p>
+                </div>
+           <% }) %> 
+    <%- include ('partials/footer') -%>

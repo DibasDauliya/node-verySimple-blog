@@ -1,0 +1,26 @@
+<%- include ('partials/header') -%>
+            <div class="card">
+                <h1 class="heading">Compose </h1>
+                <div class="card shadow mt-3">
+                    <form action="/compose" method="POST">
+                    <div class="form-group">
+                        <h3>
+                            Title
+                        </h3>
+                        <input type="text" name="postTitle" class="form-control"
+                        autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <h3>
+                            Post
+                        </h3>
+                        <textarea name="postBody" class="form-control" rows="5" cols="30"> </textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" class="form-control" value="Publish">
+                    </div>
+                    </form>
+                </div>
+            </div>
+    <%- include ('partials/footer') -%>
